@@ -1,0 +1,8 @@
+image: gitlab-mi.informatik.uni-ulm.de:4567/gitlab-pages/hugo-runner 
+
+pages: 
+    script: 
+        - git submodule update --init --recursive 
+        - hugo 
+        - mv public ${CI_PROJECT_NAME} 
+        - scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ${CI_PROJECT_NAME} www-data@luxo.informatik.uni-ulm.de:/var/www/mi.pages/ 

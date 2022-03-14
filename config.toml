@@ -1,0 +1,7 @@
+baseURL = "https://mi-pages.informatik.uni-ulm.de/swh-19-20-marcoc/"
+languageCode = "en-us"
+title = "Sketching with Hardware"
+theme = "aether"
+
+[markup.goldmark.renderer]
+  unsafe= true
